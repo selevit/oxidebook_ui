@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 
 function App() {
   return (
     <div class="orderbook">
-      <table class="buys">
+      <table class="orderbook-side buys">
         <tr>
           <th>Size</th>
           <th>Price (USD)</th>
@@ -27,7 +28,7 @@ function App() {
         </tr>
       </table>
       <div class="spread">Spread: 500 USD</div>
-      <table class="sells">
+      <table class="orderbook-side sells">
         <tr>
           <th>Size</th>
           <th>Price (USD)</th>
@@ -50,16 +51,16 @@ function App() {
         </tr>
       </table>
 
-
       <form class="new-order-form">
         <p>Create order</p>
         <label>
           <input type="radio" name="type" value="buy" checked/>
-          Buy
+          &nbsp;Buy
         </label>
+        &nbsp;
         <label>
           <input type="radio" name="type" value="sell"/>
-          Sell
+          &nbsp;Sell
         </label>
         <br/>
         <label for="new-order-price">Price</label>
@@ -70,7 +71,7 @@ function App() {
         <br/>
         <label for="new-order-kind">Type</label>
         <select id="new-order-kind" name="kind">
-          <option value="IoC">IoC</option>
+          <option value="ioc">IoC</option>
         </select>
         <br/>
         <button type="button">Create</button>
