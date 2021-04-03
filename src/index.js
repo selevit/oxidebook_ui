@@ -49,6 +49,32 @@ function App() {
           <td>58000</td>
         </tr>
       </table>
+
+
+      <form class="new-order-form">
+        <p>Create order</p>
+        <label>
+          <input type="radio" name="type" value="buy" checked/>
+          Buy
+        </label>
+        <label>
+          <input type="radio" name="type" value="sell"/>
+          Sell
+        </label>
+        <br/>
+        <label for="new-order-price">Price</label>
+        <input type="number" id="new-order-price" name="price" placeholder="55000"/>
+        <br/>
+        <label for="new-order-volume">Volume</label>
+        <input type="number" id="new-order-volume" name="volume" placeholder="0.5"/>
+        <br/>
+        <label for="new-order-kind">Type</label>
+        <select id="new-order-kind" name="kind">
+          <option value="IoC">IoC</option>
+        </select>
+        <br/>
+        <button type="button">Create</button>
+      </form>
     </div>
   );
 }
