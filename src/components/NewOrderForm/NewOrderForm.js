@@ -5,7 +5,6 @@ import {
     Button,
     Card,
     CardHeader,
-    Label,
     CardBody,
     CardFooter,
     FormGroup,

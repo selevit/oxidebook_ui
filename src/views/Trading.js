@@ -1,6 +1,4 @@
 import React from "react";
-// nodejs library that concatenates classes
-import classNames from "classnames";
 import {
     Row,
     Col,
@@ -13,11 +11,9 @@ function Trading(props) {
     return (
         <div className="content">
             <Row>
-                <Col md="6">
+                <Col md="5">
                     <Orderbook/>
                 </Col>
-            </Row>
-            <Row>
                 <Col md="6">
                     <NewOrderForm/>
                 </Col>
