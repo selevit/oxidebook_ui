@@ -104,7 +104,7 @@ function Exchange(props) {
                 <div className="main-panel" ref={mainPanelRef} data="blue">
                     <Switch>
                         {getRoutes(routes)}
-                        <Redirect from="*" to="/exchange" />
+                        <Redirect from="*" to="/exchange/trading" />
                     </Switch>
                 </div>
             </div>
