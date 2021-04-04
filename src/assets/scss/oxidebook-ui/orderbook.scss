@@ -1,0 +1,35 @@
+.orderbook {
+    font-family: monospace;
+    font-size: $font-size-sm;
+
+    .spread {
+        background-color: $blue;
+        color: $white;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .side {
+        padding: 10px;
+
+        table {
+            width: 100%;
+            text-align: left;
+        }
+
+        th {
+            padding-bottom: 10px;
+        }
+    }
+
+    .sells {
+        background-color: $red;
+        color: $white;
+    }
+
+    .buys {
+        background-color: $green;
+        color: $dark;
+    }
+
+}

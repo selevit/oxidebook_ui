@@ -1,83 +1,36 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+/*!
 
-function App() {
-  return (
-    <div class="orderbook">
-      <table class="orderbook-side buys">
-        <tr>
-          <th>Size</th>
-          <th>Price (USD)</th>
-        </tr>
-        <tr>
-          <td>1.2</td>
-          <td>52000</td>
-        </tr>
-        <tr>
-          <td>0.5</td>
-          <td>53000</td>
-        </tr>
-        <tr>
-          <td>0.02</td>
-          <td>54000</td>
-        </tr>
-        <tr>
-          <td>0.01</td>
-          <td>55000</td>
-        </tr>
-      </table>
-      <div class="spread">Spread: 500 USD</div>
-      <table class="orderbook-side sells">
-        <tr>
-          <th>Size</th>
-          <th>Price (USD)</th>
-        </tr>
-        <tr>
-          <td>0.01</td>
-          <td>55500</td>
-        </tr>
-        <tr>
-          <td>0.02</td>
-          <td>56000</td>
-        </tr>
-        <tr>
-          <td>0.5</td>
-          <td>57000</td>
-        </tr>
-        <tr>
-          <td>1.2</td>
-          <td>58000</td>
-        </tr>
-      </table>
+=========================================================
+* Black Dashboard React v1.2.0
+=========================================================
 
-      <form class="new-order-form">
-        <p>Create order</p>
-        <label>
-          <input type="radio" name="type" value="buy" checked/>
-          &nbsp;Buy
-        </label>
-        &nbsp;
-        <label>
-          <input type="radio" name="type" value="sell"/>
-          &nbsp;Sell
-        </label>
-        <br/>
-        <label for="new-order-price">Price</label>
-        <input type="number" id="new-order-price" name="price" placeholder="55000"/>
-        <br/>
-        <label for="new-order-volume">Volume</label>
-        <input type="number" id="new-order-volume" name="volume" placeholder="0.5"/>
-        <br/>
-        <label for="new-order-kind">Type</label>
-        <select id="new-order-kind" name="kind">
-          <option value="ioc">IoC</option>
-        </select>
-        <br/>
-        <button type="button">Create</button>
-      </form>
-    </div>
-  );
-}
+* Product Page: https://www.creative-tim.com/product/black-dashboard-react
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/black-dashboard-react/blob/master/LICENSE.md)
 
-ReactDOM.render(<App />, document.getElementById('root'));
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+
+import ExchangeLayout from "layouts/Exchange/Exchange.js";
+
+import "assets/scss/black-dashboard-react.scss";
+import "assets/css/nucleo-icons.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+ReactDOM.render(
+  <BrowserRouter>
+    <Switch>
+      <Route path="/exchange" render={(props) => <ExchangeLayout {...props} />} />
+      <Redirect from="/" to="/exchange" />
+    </Switch>
+  </BrowserRouter>,
+  document.getElementById("root")
+);
